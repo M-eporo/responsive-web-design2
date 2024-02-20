@@ -5,7 +5,7 @@ body {
   background-color: #eee;
 }
 
-h1,h2,h3,h4,h5,h6,p, figure {
+h1,h2,h3,h4,h5,h6,p {
   margin: 0;
 }
 
@@ -24,8 +24,6 @@ a:hover {
 
 img {
   display: block;
-  max-width: 100%;
-  height: auto;
 }
 
 .w-container {
@@ -60,15 +58,16 @@ img {
 
 .hero {
   height: 650px;
-  background-image: url("img/hero.jpg");
+  background-image: url("../../img/hero.jpg");
   background-size: cover;
   background-position: center;
 }
 
 .hero-container {
-  display: grid;
-  justify-items: center;
-  align-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 100%;
 }
 
@@ -97,4 +96,3 @@ img {
   text-align: center;
   text-shadow: 0 0 6px #00000052; 
 }
-
