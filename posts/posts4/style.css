@@ -66,7 +66,7 @@ img {
 
 .hero {
   height: 650px;
-  background-image: url("img/hero.jpg");
+  background-image: url("../../img/hero.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -171,14 +171,19 @@ img {
 }
 
 .posts-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 32px 25px;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 32px;
+  justify-content: space-between;
 }
 
+.posts-container > * {
+  width: 47%;
+}
 @media (min-width: 768px) {
-  .posts-container {
-    grid-template-columns: repeat(3, 1fr);
+  .posts-container > * {
+    width: 32%;
+    
   }
 }
 

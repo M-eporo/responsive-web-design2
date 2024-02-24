@@ -1,10 +1,5 @@
 @charset "UTF-8";
 /* base */
-
-:root {
-  --v-space: clamp(90px, 9vw, 120px);
-}
-
 body {
   margin: 0;
   background-color: #eee;
@@ -36,7 +31,6 @@ img {
 .w-container {
   width: min(92%, 1166px);
   margin: 0 auto; 
-  position: relative;
 }
 
 /* header */
@@ -66,7 +60,7 @@ img {
 
 .hero {
   height: 650px;
-  background-image: url("img/hero.jpg");
+  background-image: url("../../img/hero.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -115,19 +109,18 @@ img {
   padding-top: 0;
 }
 .imgtext-container {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: clamp(45px, 6vw, 80px);
 }
 
 @media (width >= 768px){
   .imgtext-container {
-    flex-direction: row;
+    grid-template-columns: 1fr 2fr;
     align-items: center;
   }
 
   .imgtext-container.reverse {
-    flex-direction: row-reverse;
+    grid-template-columns: 2fr 1fr;
   }
   .imgtext-container > .text {
     flex: 1;
@@ -138,6 +131,13 @@ img {
     flex: 2;
   }
   
+  .imgtext-container.reverse > .text {
+    order: 2;
+  }
+  
+  .imgtext-container.reverse > .img {
+    order: 1;
+  }
 }
 
 .heading-decoration {
@@ -163,64 +163,3 @@ img {
   font-size: 18px;
 }
 
-/* post */
-
-.posts {
-  padding: var(--v-space) 0;
-  background-color: #f3f1ed;
-}
-
-.posts-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 32px 25px;
-}
-
-@media (min-width: 768px) {
-  .posts-container {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-.heading {
-  position: absolute;
-  top: calc((var(--v-space) + 0.6em) * -1);
-  font-family: "Montserrat", sans-serif;
-  font-size: clamp(40px, 5.2vw, 70px);
-  min-height: 0vw;
-  font-weight: 300;
-}
-
-.heading span {
-  display: block;
-  color: #666;
-  font-size: 18px;
-}
-
-.post img {
-  object-fit: cover;
-  width: 100%;
-  aspect-ratio: 3/2;
-}
-
-@supports not (aspect-ratio: 3/2){
-  .post img {
-    height: 180px;
-  }
-}
-
-.post a {
-  display: block;
-}
-
-.post h3 {
-  margin: 1em 0 0.5em;
-  font-size: clamp(12px, 2vw, 20px);
-  min-height: 0vw;
-}
-
-.post p {
-  max-width: 20em;
-  font-size: clamp(10px, 1.6vw, 14px);
-  min-height: 0vw;
-}
