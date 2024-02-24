@@ -68,7 +68,7 @@ img {
 
 .hero {
   height: 650px;
-  background-image: url("img/hero.jpg");
+  background-image: url("../../img/hero.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -265,17 +265,18 @@ img {
 }
 
 .footer-menu {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(6em, auto));
   justify-content: center;
   gap: 20px;
 }
 
 @media (min-width: 768px){
   .footer-container {
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto auto;
-    gap: 20px;
+    display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(6em, auto));
+  justify-content: center;
+  gap: 20px;
   }
 
   .footer-container .footer-site {
