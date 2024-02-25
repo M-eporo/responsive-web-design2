@@ -19,10 +19,19 @@
         </a>
       </div>
 
-      <button class="navbtn">
+      <button class="navbtn" onClick="document.querySelector('html').classList.toggle('open')">
         <i class="fas fa-bars"></i>
+        <i class="fa-solid fa-xmark"></i>
         <span class="sr-only">MENU</span>
       </button>
+
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="content.html">サービス案内</a></li>
+          <li><a href="#">お問い合わせ</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
@@ -162,6 +171,5 @@
       </div>
     </div>
   </footer>
-
 </body>
 </html>

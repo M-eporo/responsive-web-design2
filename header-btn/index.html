@@ -15,14 +15,24 @@
     <div class="header-container w-container">
       <div class="site">
         <a href="index.html">
-          <img src="img/logo.svg" alt="Boards" width="135" height="26">
+          <img src="../img/logo.svg" alt="Boards" width="135" height="26">
         </a>
       </div>
 
-      <button class="navbtn">
+      <button class="navbtn" onClick="document.querySelector('html').classList.toggle('open');">
         <i class="fas fa-bars"></i>
+        <i class="fa-solid fa-xmark"></i>
         <span class="sr-only">MENU</span>
       </button>
+
+      <nav class="nav">
+        <ul>
+          <li><a href="#">ホーム</a></li>
+          <li><a href="#">サービス案内</a></li>
+          <li><a href="#">お問い合わせ</a></li>
+        </ul>
+      </nav>
+
     </div>
   </header>
 
@@ -42,7 +52,7 @@
         <p>どこにでもある、だれでも使ったことがある、普段は存在を意識しないけれどないと困るツールたち。日常をちょっと楽しくしてくれます。</p>
       </div>
       <figure class="img">
-        <img src="img/tool.jpg" alt="" width="1600" height="1260">
+        <img src="../img/tool.jpg" alt="" width="1600" height="1260">
       </figure>
     </div>
   </section>
@@ -54,7 +64,7 @@
         <p>様々な作業を効率よく進めるには、目的に応じて最適な道具を使うことが大切です。そんな道具たちが揃っています。</p>
       </div>
       <figure class="img">
-        <img src="img/helpful.jpg" alt="" width="1600" height="1260">
+        <img src="../img/helpful.jpg" alt="" width="1600" height="1260">
       </figure>
     </div>
   </section>
@@ -70,7 +80,7 @@
         <article class="post">
           <a href="#">
             <figure>
-              <img src="img/news01.jpg" alt="" width="1000" height="750">
+              <img src="../img/news01.jpg" alt="" width="1000" height="750">
             </figure>
             <h3>スパンコール</h3>
             <p>キラキラと光を反射する装飾素材です。いつもの道具にアクセントをつけます。</p>
@@ -79,7 +89,7 @@
 
         <artical class="post">
           <a href="#">
-            <figure><img src="img/news02.jpg" alt="" width="1000" height="750"></figure>
+            <figure><img src="../img/news02.jpg" alt="" width="1000" height="750"></figure>
             <h3>卓上ランタン</h3>
             <p>手元に明かりが欲しいときに、便利でかわいい卓上ランタンです。</p>
           </a>
@@ -87,7 +97,7 @@
 
         <artical class="post">
           <a href="#">
-            <figure><img src="img/news03.jpg" alt="" width="1000" height="750"></figure>
+            <figure><img src="../img/news03.jpg" alt="" width="1000" height="750"></figure>
             <h3>冊子印刷</h3>
             <p>スタンダードプランにも手軽な冊子印刷が登場しました。</p>
           </a>
@@ -95,7 +105,7 @@
 
         <artical class="post">
           <a href="#">
-            <figure><img src="img/news04.jpg" alt="" width="1000" height="750"></figure>
+            <figure><img src="../img/news04.jpg" alt="" width="1000" height="750"></figure>
             <h3>マグネット</h3>
             <p>メモやアイデアを貼り出しておくなら、かわいいマグネットがおすすめです。</p>
           </a>
@@ -103,7 +113,7 @@
 
         <artical class="post">
           <a href="#">
-            <figure><img src="img/news05.jpg" alt="" width="1000" height="750"></figure>
+            <figure><img src="../img/news05.jpg" alt="" width="1000" height="750"></figure>
             <h3>ビジネスノート</h3>
             <p>書き心地や開きやすさにこだわった、ビジネスノートたちを紹介します。</p>
           </a>
@@ -111,7 +121,7 @@
 
         <artical class="post">
           <a href="#">
-            <figure><img src="img/news06.jpg" alt="" width="1000" height="750"></figure>
+            <figure><img src="../img/news06.jpg" alt="" width="1000" height="750"></figure>
             <h3>ボールペン</h3>
             <p>スタイリッシュなボールペンで仕事環境の雰囲気を変えてみました。</p>
           </a>
@@ -124,7 +134,7 @@
     <div class="footer-container w-container">
       <div class="footer-site">
         <a href="index.html">
-          <img src="img/logo.svg" alt="" width="135" height="26">
+          <img src="../img/logo.svg" alt="" width="135" height="26">
         </a>
       </div>
 
@@ -162,6 +172,5 @@
       </div>
     </div>
   </footer>
-
 </body>
 </html>

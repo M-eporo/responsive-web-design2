@@ -64,11 +64,68 @@ img {
   font-size: 30px;
 }
 
+@media (max-width: 767px) {
+  .nav {
+    position: fixed;
+    inset: 0 -100% 0 100%;
+    color: #fff;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 100;
+    transition: transform 0.3s;
+  }
+
+  .open .nav {
+    transform: translate(-100%, 0);
+
+  }
+  .nav > ul {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .open .navbtn {
+    z-index: 150;
+    color: #fff;
+  }
+  
+  .fa-bars {
+    display: revert;
+  }
+  .open .fa-bars {
+    display: none;
+  }
+
+  .fa-xmark {
+    display: none;
+  }
+
+  .open .fa-xmark {
+    display: revert;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbtn {
+    display: none;
+  }
+
+  .nav > ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+}
+
 /* hero */
 
 .hero {
   height: 650px;
-  background-image: url("img/hero.jpg");
+  background-image: url("../img/hero.jpg");
   background-size: cover;
   background-position: center;
 }
